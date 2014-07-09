@@ -14,3 +14,6 @@ ActionController::RoutingError (undefined method `timestamp_sort_order' for #<Cl
   app/controllers/high_scores_controller.rb:1:in `<top (required)>'
 
 downgrade paper_trail to 3.0.2 and all is good.
+
+adding PaperTrail::Rails::Engine.eager_load! to the initializer is the
+recommended fix. see https://github.com/airblade/paper_trail/issues/392
